@@ -39,6 +39,7 @@ public class Issue extends javax.swing.JFrame {
         jCheckBox7 = new javax.swing.JCheckBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,22 +64,28 @@ public class Issue extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        jButton1.setText("Submit");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(92, 92, 92)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox6)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox7)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(78, 78, 78))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jCheckBox1)
+                        .addComponent(jCheckBox2)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCheckBox6)
+                        .addComponent(jCheckBox4)
+                        .addComponent(jCheckBox5)
+                        .addComponent(jCheckBox3)
+                        .addComponent(jCheckBox7)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(273, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -102,7 +109,9 @@ public class Issue extends javax.swing.JFrame {
                 .addComponent(jCheckBox7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
@@ -147,6 +156,7 @@ public class Issue extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;

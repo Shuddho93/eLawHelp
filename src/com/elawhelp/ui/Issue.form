@@ -31,16 +31,22 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCheckBox2" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="244" max="-2" attributes="0"/>
-                  <Component id="jCheckBox6" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCheckBox4" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCheckBox5" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCheckBox3" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCheckBox7" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" alignment="0" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jCheckBox2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="244" max="-2" attributes="0"/>
+                      <Component id="jCheckBox6" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jCheckBox4" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jCheckBox5" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jCheckBox3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jCheckBox7" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace pref="273" max="32767" attributes="0"/>
           </Group>
@@ -67,7 +73,9 @@
               <Component id="jCheckBox7" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -131,5 +139,10 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Submit"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

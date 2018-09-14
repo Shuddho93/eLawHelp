@@ -20,15 +20,19 @@ public class business {
     private String pass;
     private String product_type;
     private String issue_id;
+    private int contact;
+    private String email;
 
     public business() {
     }
 
-    public business(int b_user_id, String b_name, String pass, String product_type) {
+    public business(int b_user_id, String b_name, String pass, String product_type, int contact, String email) {
         this.b_user_id = b_user_id;
         this.b_name = b_name;
         this.pass = pass;
         this.product_type = product_type;
+        this.contact = contact;
+        this.email = email;
     }
 
     public int getB_user_id() {
@@ -69,6 +73,22 @@ public class business {
 
     public void setIssue_id(String issue_id) {
         this.issue_id = issue_id;
+    }
+
+    public int getContact() {
+        return contact;
+    }
+
+    public void setContact(int contact) {
+        this.contact = contact;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
     
     

@@ -128,18 +128,30 @@ public class Home extends javax.swing.JFrame {
 
     private void csignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_csignActionPerformed
         // TODO add your handling code here:
+        Customer_SignUp cs = new Customer_SignUp();
+        cs.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_csignActionPerformed
 
     private void lawloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lawloginActionPerformed
         // TODO add your handling code here:
+        Lawyer_Login ll=new Lawyer_Login();
+        ll.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_lawloginActionPerformed
 
     private void adminloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminloginActionPerformed
         // TODO add your handling code here:
+        Admin al=new Admin();
+        al.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_adminloginActionPerformed
 
     private void lsignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lsignActionPerformed
         // TODO add your handling code here:
+        Lawyer_SignUp ls=new Lawyer_SignUp();
+        ls.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_lsignActionPerformed
 
     /**

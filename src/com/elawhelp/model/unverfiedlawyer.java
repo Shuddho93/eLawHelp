@@ -22,11 +22,13 @@ public class unverfiedlawyer {
     private String designation;
     private String foc;
     private String bar_id;
+    private int contact;
+    private String email;
 
     public unverfiedlawyer() {
     }
 
-    public unverfiedlawyer(int ul_user_id, String ul_user_name, String ul_name, String pass, String designation, String foc, String bar_id) {
+    public unverfiedlawyer(int ul_user_id, String ul_user_name, String ul_name, String pass, String designation, String foc, String bar_id, int contact, String email) {
         this.ul_user_id = ul_user_id;
         this.ul_user_name = ul_user_name;
         this.ul_name = ul_name;
@@ -34,6 +36,8 @@ public class unverfiedlawyer {
         this.designation = designation;
         this.foc = foc;
         this.bar_id = bar_id;
+        this.contact = contact;
+        this.email = email;
     }
 
     public int getUl_user_id() {
@@ -90,6 +94,22 @@ public class unverfiedlawyer {
 
     public void setBar_id(String bar_id) {
         this.bar_id = bar_id;
+    }
+
+    public int getContact() {
+        return contact;
+    }
+
+    public void setContact(int contact) {
+        this.contact = contact;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
     
     

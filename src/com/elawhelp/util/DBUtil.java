@@ -18,9 +18,9 @@ public class DBUtil {
     
     static{
         Configuration cfg=new Configuration();
-        cfg.configure("com/BUYellowPage/resources/hibernate.cfg.xml");
+        cfg.configure("com/elawhelp/resources/hibernate.cfg.xml");
         SessionFactory factory=cfg.buildSessionFactory();
-        System.out.println("haha");
+        System.out.println("Utility accessed");
         
         session=factory.openSession();
     }
