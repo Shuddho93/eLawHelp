@@ -17,7 +17,7 @@
         <mapping class="com.elawhelp.model.verifiedlawyer"/>
         <mapping class="com.elawhelp.model.business"/>
         <mapping class="com.elawhelp.model.unverfiedlawyer"/>
-        <mapping class="com.elawhelp.model.issues"/>
+        <mapping class="com.elawhelp.model.issue"/>
         
     </session-factory>
 </hibernate-configuration>
