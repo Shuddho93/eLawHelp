@@ -5,6 +5,8 @@
  */
 package com.elawhelp.ui;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author lenovo
@@ -31,7 +33,7 @@ public class Admin extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        confirn = new javax.swing.JButton();
+        confirm = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         back = new javax.swing.JButton();
 
@@ -49,11 +51,11 @@ public class Admin extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel2.setText("Password:");
 
-        confirn.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        confirn.setText("Confirm");
-        confirn.addActionListener(new java.awt.event.ActionListener() {
+        confirm.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        confirm.setText("Confirm");
+        confirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                confirnActionPerformed(evt);
+                confirmActionPerformed(evt);
             }
         });
 
@@ -82,7 +84,7 @@ public class Admin extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(confirn, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(confirm, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
@@ -106,7 +108,7 @@ public class Admin extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(confirn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(confirm, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(60, 60, 60))
         );
 
@@ -117,9 +119,16 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void confirnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirnActionPerformed
+    private void confirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_confirnActionPerformed
+        if(jTextField1.getText().equals("admin") && jTextField2.getText().equals("1234")){
+            this.setVisible(false);
+            Admin_law al = new Admin_law();
+            al.setVisible(true);
+            al.showList();
+            System.out.println("confirm action");
+        }
+    }//GEN-LAST:event_confirmActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         // TODO add your handling code here:
@@ -163,7 +172,7 @@ public class Admin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
-    private javax.swing.JButton confirn;
+    private javax.swing.JButton confirm;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
