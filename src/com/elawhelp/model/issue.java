@@ -32,7 +32,7 @@ public class issue {
         this.issue_id = issue_id;
         this.issue_cat = issue_cat;
     }
-
+    
     public int getIssue_id() {
         return issue_id;
     }

@@ -197,7 +197,7 @@ public class Customer_SignUp extends javax.swing.JFrame {
                 if (x == 2) {
                     JOptionPane.showMessageDialog(this, "Sign Up Successful");
                     this.setVisible(false);
-                    new Issue().setVisible(true);
+                    new Issue(name).setVisible(true);
                 }
     }//GEN-LAST:event_jButton2ActionPerformed
 

@@ -5,6 +5,14 @@
  */
 package com.elawhelp.ui;
 
+import com.elawhelp.dao.DataAccess;
+import com.elawhelp.model.unverfiedlawyer;
+import com.elawhelp.util.DBUtil;
+import java.util.List;
+import javax.swing.JOptionPane;
+import org.hibernate.Query;
+import org.hibernate.Session;
+
 /**
  *
  * @author lenovo
@@ -200,6 +208,26 @@ public class Lawyer_SignUp extends javax.swing.JFrame {
         int contact = Integer.parseInt(jTextField6.getText());
         String email = jTextField7.getText();
         
+        Session session = DBUtil.getSession();
+                String hql4 = "from unverfiedlawyer";
+                Query q4 = session.createQuery(hql4);
+                List<unverfiedlawyer> list4 = q4.list();
+                int count4 = 0;
+                if (list4.isEmpty()) {
+                    count4 = 0;
+                } else {
+                    count4 = (Integer) (list4.get((list4.size()) - 1)).getUl_user_id();
+                }
+                System.out.println("list count2: " + count4);
+                int userID = count4 + 1;
+                unverfiedlawyer ul = new unverfiedlawyer(userID, name, pass, desig, exp, bar_id, contact, email);
+                int x = 0;
+                x = DataAccess.insertData(ul);
+                if (x == 2) {
+                    JOptionPane.showMessageDialog(this, "Sign Up Successful");
+                    this.setVisible(false);
+                    new Lawyer_info().setVisible(true);
+                }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

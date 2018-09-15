@@ -139,7 +139,7 @@ public class Customer_Login extends javax.swing.JFrame {
                 } else {
                     JOptionPane.showMessageDialog(this, "Login Success!");
                     this.setVisible(false);
-                    new Issue().setVisible(true);
+                    new Issue(user).setVisible(true);
                 }
     }//GEN-LAST:event_jButton2ActionPerformed
 

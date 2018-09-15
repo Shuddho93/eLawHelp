@@ -5,6 +5,15 @@
  */
 package com.elawhelp.ui;
 
+import com.elawhelp.dao.DataAccess;
+import com.elawhelp.model.issue;
+import com.elawhelp.model.business;
+import com.elawhelp.util.DBUtil;
+import java.util.List;
+import javax.swing.JOptionPane;
+import org.hibernate.Query;
+import org.hibernate.Session;
+
 /**
  *
  * @author lenovo
@@ -14,7 +23,14 @@ public class Issue extends javax.swing.JFrame {
     /**
      * Creates new form Issue
      */
+    private String b_name;
+    
     public Issue() {
+        initComponents();
+    }
+
+    public Issue(String b_name) {
+        this.b_name = b_name;
         initComponents();
     }
 
@@ -57,6 +73,11 @@ public class Issue extends javax.swing.JFrame {
         jCheckBox5.setText("Intellectual Property");
 
         jCheckBox6.setText("Business Structure");
+        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox6ActionPerformed(evt);
+            }
+        });
 
         jCheckBox7.setText("Others");
 
@@ -65,6 +86,11 @@ public class Issue extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Submit");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,6 +142,76 @@ public class Issue extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String cat = "";
+        String desc = "";
+        Session session = DBUtil.getSession();
+        String hql6 = "from issue";
+        Query q6 = session.createQuery(hql6);
+        List<issue> list6 = q6.list();
+        int count6 = 0;
+        if (list6.isEmpty()) {
+            count6 = 0;
+        } else {
+            count6 = (Integer) (list6.get((list6.size()) - 1)).getIssue_id();
+        }
+        System.out.println("list count6: " + count6);
+        int issue_ID = count6 + 1;
+
+        if (jCheckBox1.isSelected()==true) {
+            cat = "Business Structure ";
+        }
+        else if (jCheckBox2.isSelected()==true){
+            cat = cat.concat("Licences ");
+        }
+        else if (jCheckBox3.isSelected()){
+            cat = cat.concat("Taxes ");
+        }
+        else if (jCheckBox4.isSelected()){
+            cat = cat.concat("Employment ");
+        }
+        else if (jCheckBox5.isSelected()){
+            cat = cat.concat("Contracts ");
+        }
+        else if (jCheckBox6.isSelected()){
+            cat = cat.concat("Intellectual Property ");
+        }
+        else if (jCheckBox7.isSelected()) {
+            cat = "Other";
+            desc = jTextArea1.getText();
+        }
+        else{
+            //error
+        }
+        System.out.println("before update hql");
+        Session session1 = DBUtil.getSession();
+        String hqlUpdate = "update business set issue_id = :id where b_name = :name";
+        Query q7 = session1.createQuery(hqlUpdate);
+        q7.setParameter("id", ""+issue_ID);
+        q7.setParameter("name", b_name);
+        int updatedEntities = q7.executeUpdate();
+        System.out.println("after update hql");
+        
+        
+        System.out.println("data updated with return : " + updatedEntities);
+        
+        issue i = new issue(issue_ID, cat, desc);
+        int x = 0;
+        x = DataAccess.insertData(i);
+        if (x == 2) {
+            JOptionPane.showMessageDialog(this, "Issue posting successful");
+            this.setVisible(false);
+            new Request_Lawyer().setVisible(true);
+        }
+        
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

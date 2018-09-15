@@ -16,7 +16,6 @@ import javax.persistence.Id;
 public class unverfiedlawyer {
     @Id
     private int ul_user_id;
-    private String ul_user_name;
     private String ul_name;
     private String pass;
     private String designation;
@@ -28,9 +27,8 @@ public class unverfiedlawyer {
     public unverfiedlawyer() {
     }
 
-    public unverfiedlawyer(int ul_user_id, String ul_user_name, String ul_name, String pass, String designation, String foc, String bar_id, int contact, String email) {
+    public unverfiedlawyer(int ul_user_id, String ul_name, String pass, String designation, String foc, String bar_id, int contact, String email) {
         this.ul_user_id = ul_user_id;
-        this.ul_user_name = ul_user_name;
         this.ul_name = ul_name;
         this.pass = pass;
         this.designation = designation;
@@ -46,14 +44,6 @@ public class unverfiedlawyer {
 
     public void setUl_user_id(int ul_user_id) {
         this.ul_user_id = ul_user_id;
-    }
-
-    public String getUl_user_name() {
-        return ul_user_name;
-    }
-
-    public void setUl_user_name(String ul_user_name) {
-        this.ul_user_name = ul_user_name;
     }
 
     public String getUl_name() {
